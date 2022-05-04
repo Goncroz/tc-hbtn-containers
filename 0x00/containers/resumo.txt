@@ -1,0 +1,57 @@
+O que são contêineres?
+O Docker é um projeto de software livre para automatizar a implantação de aplicativos como contêineres autossuficientes portáteis que podem ser executados 
+na nuvem ou localmente. O Docker também é uma empresa que promove e evolui essa tecnologia, trabalhando em colaboração com fornecedores de nuvem, Linux e Windows, 
+incluindo a Microsoft.
+
+
+
+Para que se usa um contêiner?
+Os containers são utilizados em larga escala no desenvolvimento, testes e, principalmente, na produção de softwares. São eles que permitem rodar múltiplos 
+sistemas isolados dentro de um sistema operacional real.
+
+
+
+Quais são os benefícios dos contêineres?
+Economia de recursos;
+Maior disponibilidade do sistema;
+Compartilhamento;
+Facilidade de gerenciamento;
+Ambientes similares;
+Aplicação como pacote completo;
+Padronização e replicação;
+Acesso à comunidade;
+
+
+
+Quais são os desafios dos contêineres?
+O Docker não fornece as mesmas funcionalidades parecidas com UNIX que os containers Linux tradicionais oferecem. Isso inclui a capacidade de usar processos como cron ou 
+syslog dentro do container, junto à aplicação.
+O Docker também tem algumas limitações em questões como a limpeza de processos netos (grandchild) após o encerramento dos processos filhos (child), algo que é processado 
+de forma natural nos containers Linux tradicionais.
+Essas desvantagens podem ser mitigadas ao modificar o arquivo de configuração e configurar essas funcionalidade desde o início, algo que não é imediatamente óbvio em um 
+primeiro momento.
+Além disso, há outros subsistemas e dispositivos do Linux sem espaço de nomes. Incluindo os dispositivos SELinux, Cgroups e /dev/sd*.
+Isso significa que, se um invasor adquirir controle sobre esses subsistemas, o host será comprometido. Para manter-se leve, o compartilhamento do kernel do host com os 
+containers gera a possibilidade dessa vulnerabilidade na segurança.
+Isso é diferente nas máquinas virtuais, que são mais firmemente segregadas a partir do sistema host.
+
+
+
+Quais as diferenças entre containers e máquinas virtuais (VMs) ?
+Os containers funcionam um pouco como as VMs, mas de uma maneira muito mais específica e granular.
+Em uma máquina virtual, é possível utilizar diversos recursos e ferramentas, como Apache e PHP, porém tudo roda em um mesmo sistema operacional. Em caso de pane, todas as 
+funcionalidades são afetadas.
+No caso dos containers, a ideia é que cada um faça apenas um serviço e assuma uma só responsabilidade. Ou seja, seria um rodando com Apache e outro com PHP.
+Desta forma, é possível isolar os processos de cada ferramenta, garantindo que nenhuma atrapalhe o funcionamento da outra.
+Para serviços web, por exemplo, os containers deixam a infraestrutura muito mais intercambiável, eficiente e flexível.
+Eles isolam um único aplicativo e suas dependências – todas as bibliotecas externas de software que o aplicativo precisa executar – tanto do sistema operacional subjacente 
+quanto de outros containers. 
+Todos os aplicativos em container compartilham um único sistema operacional comum (Linux ou Windows), mas eles são compartilhados entre um e outro e do sistema como um todo.
+À primeira vista, eles podem até tornar a situação um pouco mais complexa, porém, principalmente nos servidores de produção, oferecem um ganho enorme em termos de escala e 
+performance e, portanto, são uma ferramenta valiosa.
+
+
+
+Quais são as principais ferramentas e tecnologias de contêiner?
+Docker e Kubernetes são os grandes nomes na área de contêineres. O Docker é uma plataforma de contêiner de código aberto. O Kubernetes é a opção mais popular para orquestração 
+de contêineres — embora existam alternativas como Docker Swarm e VMware Tanzu.

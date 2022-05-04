@@ -2,6 +2,9 @@ O que são contêineres?
 O Docker é um projeto de software livre para automatizar a implantação de aplicativos como contêineres autossuficientes portáteis que podem ser executados 
 na nuvem ou localmente. O Docker também é uma empresa que promove e evolui essa tecnologia, trabalhando em colaboração com fornecedores de nuvem, Linux e Windows, 
 incluindo a Microsoft.
+Contêiners
+aplicações
+Red Hat
 
 Para que se usa um contêiner?
 Os containers são utilizados em larga escala no desenvolvimento, testes e, principalmente, na produção de softwares. São eles que permitem rodar múltiplos 
